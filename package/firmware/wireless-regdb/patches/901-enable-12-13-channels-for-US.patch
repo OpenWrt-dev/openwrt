@@ -9,7 +9,7 @@ Subject: [PATCH] enable 12-13 channels for US
 
 --- a/db.txt
 +++ b/db.txt
-@@ -1581,7 +1581,7 @@ country UG: DFS-FCC
+@@ -1593,7 +1593,7 @@ country UG: DFS-FCC
  # frequency band, 2,483.5–2,500 MHz which is subject to strict emission limits
  # set out in 47 CFR § 15.205. TODO: reenable and specify a safe TX power here.
  country US: DFS-FCC
