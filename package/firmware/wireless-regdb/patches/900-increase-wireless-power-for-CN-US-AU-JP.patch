@@ -1,15 +1,18 @@
-From e2be52d3245e59394fa6e22370b95addd97e8e84 Mon Sep 17 00:00:00 2001
-From: pexcn <i@pexcn.me>
-Date: Sat, 6 Mar 2021 15:46:15 +0800
-Subject: [PATCH] increase wireless power for CN,US,AU,JP
+From 8c7a803a5d02050ba932937f5ec1174bb31dbb4e Mon Sep 17 00:00:00 2001
+From: pexcn <pexcn97@gmail.com>
+Date: Thu, 9 Feb 2023 16:10:50 +0800
+Subject: [PATCH 1/2] increase wireless power for CN,US,AU,JP
 
+Signed-off-by: pexcn <pexcn97@gmail.com>
 ---
- db.txt | 36 ++++++++++++++++++------------------
- 1 file changed, 18 insertions(+), 18 deletions(-)
+ db.txt | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
 
+diff --git a/db.txt b/db.txt
+index 07cdf4a..958f6a5 100644
 --- a/db.txt
 +++ b/db.txt
-@@ -125,10 +125,10 @@ country AT: DFS-ETSI
+@@ -131,10 +131,10 @@ country AT: DFS-ETSI
  # of this more restrictive band has been shifted up by 5MHz from 5725MHz.
  country AU: DFS-ETSI
  	(2400 - 2483.5 @ 40), (36)
@@ -22,24 +25,20 @@ Subject: [PATCH] increase wireless power for CN,US,AU,JP
 +	(5470 - 5600 @ 80), (30), DFS
 +	(5650 - 5730 @ 80), (30), DFS
  	(5730 - 5850 @ 80), (36)
+ 	(5925 - 6425 @ 160), (24), NO-OUTDOOR
  	(57000 - 66000 @ 2160), (43), NO-OUTDOOR
- 
-@@ -347,10 +347,10 @@ country CL: DFS-JP
- 	(5735 - 5835 @ 80), (20)
- 
+@@ -369,8 +369,8 @@ country CL: DFS-JP
+ # https://wap.miit.gov.cn/cms_files/filemanager/1226211233/attach/20219/d125301b13454551b698ff5afa49ca28.pdf
+ # Note: The transmit power for 5150-5350MHz bands can be raised by 3dBm when TPC is implemented
  country CN: DFS-FCC
--	(2402 - 2482 @ 40), (20)
--	(5170 - 5250 @ 80), (23), AUTO-BW
--	(5250 - 5330 @ 80), (23), DFS, AUTO-BW
--	(5735 - 5835 @ 80), (30)
-+	(2402 - 2482 @ 40), (30)
-+	(5170 - 5250 @ 80), (30), AUTO-BW
-+	(5250 - 5330 @ 80), (30), DFS, AUTO-BW
-+	(5735 - 5835 @ 80), (35)
+-	(2400 - 2483.5 @ 40), (20)
+-	(5150 - 5350 @ 80), (20), DFS, AUTO-BW
++	(2400 - 2483.5 @ 40), (30)
++	(5150 - 5350 @ 80), (30), DFS, AUTO-BW
+ 	(5725 - 5850 @ 80), (33)
  	# 60 GHz band channels 1,4: 28dBm, channels 2,3: 44dBm
  	# ref: http://www.miit.gov.cn/n11293472/n11505629/n11506593/n11960250/n11960606/n11960700/n12330791.files/n12330790.pdf
- 	(57240 - 59400 @ 2160), (28)
-@@ -824,12 +824,12 @@ country JO: DFS-JP
+@@ -897,12 +897,12 @@ country JO: DFS-JP
  	(5735 - 5835 @ 80), (23)
  
  country JP: DFS-JP
@@ -54,26 +53,27 @@ Subject: [PATCH] increase wireless power for CN,US,AU,JP
 +	(4910 - 4990 @ 40), (30)
 +	(5170 - 5250 @ 80), (30), AUTO-BW
 +	(5250 - 5330 @ 80), (30), DFS, AUTO-BW
-+	(5490 - 5710 @ 160), (35), DFS
++	(5490 - 5710 @ 160), (30), DFS
  	# 60 GHz band channels 2-4 at 10mW,
  	# ref: http://www.arib.or.jp/english/html/overview/doc/1-STD-T74v1_1.pdf
  	(57000 - 66000 @ 2160), (10 mW)
-@@ -1595,14 +1595,14 @@ country UG: DFS-FCC
- country US: DFS-FCC
+@@ -1723,13 +1723,13 @@ country US: DFS-FCC
+ 	(920 - 928 @ 8), (30)
  	(2400 - 2472 @ 40), (30)
  	# 5.15 ~ 5.25 GHz: 30 dBm for master mode, 23 dBm for clients
 -	(5150 - 5250 @ 80), (23), AUTO-BW
--	(5250 - 5350 @ 80), (23), DFS, AUTO-BW
+-	(5250 - 5350 @ 80), (24), DFS, AUTO-BW
 +	(5150 - 5250 @ 80), (30), AUTO-BW
 +	(5250 - 5350 @ 80), (30), DFS, AUTO-BW
  	# This range ends at 5725 MHz, but channel 144 extends to 5730 MHz.
  	# Since 5725 ~ 5730 MHz belongs to the next range which has looser
  	# requirements, we can extend the range by 5 MHz to make the kernel
  	# happy and be able to use channel 144.
--	(5470 - 5730 @ 160), (23), DFS
--	(5730 - 5850 @ 80), (30), AUTO-BW
+-	(5470 - 5730 @ 160), (24), DFS
 +	(5470 - 5730 @ 160), (30), DFS
-+	(5730 - 5850 @ 80), (35), AUTO-BW
+ 	(5730 - 5850 @ 80), (30), AUTO-BW
  	# https://www.federalregister.gov/documents/2021/05/03/2021-08802/use-of-the-5850-5925-ghz-band
  	# max. 33 dBm AP @ 20MHz, 36 dBm AP @ 40Mhz+, 6 dB less for clients
- 	(5850 - 5895 @ 40), (27), NO-OUTDOOR, AUTO-BW, NO-IR
+-- 
+2.30.2
+

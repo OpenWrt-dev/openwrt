@@ -1,0 +1,26 @@
+From 6336545084ea84137ebd4882d91a3312c342b489 Mon Sep 17 00:00:00 2001
+From: pexcn <pexcn97@gmail.com>
+Date: Thu, 9 Feb 2023 16:12:37 +0800
+Subject: [PATCH 2/2] enable 2.4ghz 12-13 channels for US
+
+Signed-off-by: pexcn <pexcn97@gmail.com>
+---
+ db.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/db.txt b/db.txt
+index 958f6a5..48ab05b 100644
+--- a/db.txt
++++ b/db.txt
+@@ -1721,7 +1721,7 @@ country US: DFS-FCC
+ 	(904 - 920 @ 16), (30)
+ 	# S1G Channel 37-51
+ 	(920 - 928 @ 8), (30)
+-	(2400 - 2472 @ 40), (30)
++	(2400 - 2482 @ 40), (30)
+ 	# 5.15 ~ 5.25 GHz: 30 dBm for master mode, 23 dBm for clients
+ 	(5150 - 5250 @ 80), (30), AUTO-BW
+ 	(5250 - 5350 @ 80), (30), DFS, AUTO-BW
+-- 
+2.30.2
+
