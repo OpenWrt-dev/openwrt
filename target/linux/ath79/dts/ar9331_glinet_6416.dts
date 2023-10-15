@@ -11,6 +11,11 @@
 	};
 };
 
+// for my single ethernet port glinet 6416
+&eth1 {
+	compatible = "syscon", "simple-mfd";
+};
+
 &spi {
 	status = "okay";
 

@@ -332,6 +332,9 @@ ath79_setup_interfaces()
 	etactica,eg200)
 		ucidef_set_interface_lan "eth0" "dhcp"
 		;;
+	glinet,6416)
+		ucidef_set_interface_lan "eth0"
+		;;
 	glinet,gl-ar750)
 		ucidef_set_interface_wan "eth1"
 		ucidef_add_switch "switch0" \
