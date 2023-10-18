@@ -84,7 +84,7 @@
 &eth1 {
 	gmac-config {
 		device = <&gmac>;
-		switch-phy-swap = <1>;
+		switch-only-mode = <1>;
 	};
 };
 
