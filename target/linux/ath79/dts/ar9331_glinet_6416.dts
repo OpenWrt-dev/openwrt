@@ -33,6 +33,7 @@
 			uboot: partition@0 {
 				reg = <0x0 0x20000>;
 				label = "u-boot";
+				read-only;
 			};
 
 			partition@20000 {
@@ -44,6 +45,7 @@
 			art: partition@ff0000 {
 				reg = <0xff0000 0x10000>;
 				label = "art";
+				read-only;
 			};
 		};
 	};
