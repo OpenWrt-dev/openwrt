@@ -1,14 +1,15 @@
-From e2be52d3245e59394fa6e22370b95addd97e8e84 Mon Sep 17 00:00:00 2001
-From: pexcn <i@pexcn.me>
-Date: Sat, 6 Mar 2021 15:46:15 +0800
+From 061f6e14c99f27cf077232fcc73b729b8ec934da Mon Sep 17 00:00:00 2001
+From: pexcn <pexcn97@gmail.com>
+Date: Sat, 21 Oct 2023 14:15:35 +0800
 Subject: [PATCH] increase wireless power for CN,US,AU,JP
 
+Signed-off-by: pexcn <pexcn97@gmail.com>
 ---
- db.txt | 36 ++++++++++++++++++------------------
- 1 file changed, 18 insertions(+), 18 deletions(-)
+ db.txt | 34 +++++++++++++++++-----------------
+ 1 file changed, 17 insertions(+), 17 deletions(-)
 
 diff --git a/db.txt b/db.txt
-index c71a03a..92c2513 100644
+index 3e442ba..6721400 100644
 --- a/db.txt
 +++ b/db.txt
 @@ -125,10 +125,10 @@ country AT: DFS-ETSI
@@ -26,22 +27,20 @@ index c71a03a..92c2513 100644
  	(5730 - 5850 @ 80), (36)
  	(57000 - 66000 @ 2160), (43), NO-OUTDOOR
  
-@@ -347,10 +347,10 @@ country CL: DFS-JP
+@@ -347,9 +347,9 @@ country CL: DFS-JP
  	(5735 - 5835 @ 80), (20)
  
  country CN: DFS-FCC
 -	(2402 - 2482 @ 40), (20)
 -	(5170 - 5250 @ 80), (23), AUTO-BW
 -	(5250 - 5330 @ 80), (23), DFS, AUTO-BW
--	(5735 - 5835 @ 80), (30)
 +	(2402 - 2482 @ 40), (30)
 +	(5170 - 5250 @ 80), (30), AUTO-BW
 +	(5250 - 5330 @ 80), (30), DFS, AUTO-BW
-+	(5735 - 5835 @ 80), (35)
+ 	(5735 - 5835 @ 80), (30)
  	# 60 GHz band channels 1,4: 28dBm, channels 2,3: 44dBm
  	# ref: http://www.miit.gov.cn/n11293472/n11505629/n11506593/n11960250/n11960606/n11960700/n12330791.files/n12330790.pdf
- 	(57240 - 59400 @ 2160), (28)
-@@ -810,12 +810,12 @@ country JO: DFS-JP
+@@ -824,12 +824,12 @@ country JO: DFS-JP
  	(5735 - 5835 @ 80), (23)
  
  country JP: DFS-JP
@@ -56,11 +55,11 @@ index c71a03a..92c2513 100644
 +	(4910 - 4990 @ 40), (30)
 +	(5170 - 5250 @ 80), (30), AUTO-BW
 +	(5250 - 5330 @ 80), (30), DFS, AUTO-BW
-+	(5490 - 5710 @ 160), (35), DFS
++	(5490 - 5710 @ 160), (30), DFS
  	# 60 GHz band channels 2-4 at 10mW,
  	# ref: http://www.arib.or.jp/english/html/overview/doc/1-STD-T74v1_1.pdf
  	(57000 - 66000 @ 2160), (10 mW)
-@@ -1580,14 +1580,14 @@ country UG: DFS-FCC
+@@ -1595,17 +1595,17 @@ country UG: DFS-FCC
  country US: DFS-FCC
  	(2400 - 2472 @ 40), (30)
  	# 5.15 ~ 5.25 GHz: 30 dBm for master mode, 23 dBm for clients
@@ -73,12 +72,15 @@ index c71a03a..92c2513 100644
  	# requirements, we can extend the range by 5 MHz to make the kernel
  	# happy and be able to use channel 144.
 -	(5470 - 5730 @ 160), (23), DFS
--	(5730 - 5850 @ 80), (30)
 +	(5470 - 5730 @ 160), (30), DFS
-+	(5730 - 5850 @ 80), (35)
+ 	(5730 - 5850 @ 80), (30), AUTO-BW
+ 	# https://www.federalregister.gov/documents/2021/05/03/2021-08802/use-of-the-5850-5925-ghz-band
+ 	# max. 33 dBm AP @ 20MHz, 36 dBm AP @ 40Mhz+, 6 dB less for clients
+-	(5850 - 5895 @ 40), (27), NO-OUTDOOR, AUTO-BW, NO-IR
++	(5850 - 5895 @ 40), (30), NO-OUTDOOR, AUTO-BW, NO-IR
  	# 60g band
  	# reference: section IV-D https://docs.fcc.gov/public/attachments/FCC-16-89A1.pdf
  	# channels 1-6 EIRP=40dBm(43dBm peak)
 -- 
-2.30.1
+2.39.2
 
