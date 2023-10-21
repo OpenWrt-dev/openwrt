@@ -102,6 +102,7 @@
 			uboot: partition@0 {
 				reg = <0x0 0x20000>;
 				label = "u-boot";
+				read-only;
 			};
 
 			firmware: partition@20000 {
@@ -113,6 +114,7 @@
 			art: partition@7f0000 {
 				reg = <0x7f0000 0x10000>;
 				label = "art";
+				read-only;
 			};
 		};
 	};
